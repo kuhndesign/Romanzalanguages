@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300&display=swap');
+
+*{font-family:'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+outline: none; border: none;
+text-decoration: none;
+transition: 1s linear;}
+
+html{font-size: 82.5%;
+overflow-x: hidden;
+scroll-padding-top: 9rem;
+scroll-behavior: smooth; }
+
+html::-webkit-scrollbar {width: 0.7rem;background: #eee;}
+html::-webkit-scrollbar-track{ background: transparent;}
+html::-webkit-scrollbar-thumb{background: #AF2655;border-radius: 10px;}
+
+section{padding: 2rem 7%;}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?74457357');
+  src: url('../font/fontello.eot?74457357#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?74457357') format('woff2'),
+       url('../font/fontello.woff?74457357') format('woff'),
+       url('../font/fontello.ttf?74457357') format('truetype'),
+       url('../font/fontello.svg?74457357#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?74457357#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-wsp:before { content: '\f232'; } /* '' */
+
+.btn-wsp i{font-size: 0.9em; font-family: 'fontello';}
+
+.btn-wsp {
+  position:fixed;
+  width:60px;
+  height:60px;
+  line-height: 63px;
+  bottom:25px;
+  right:25px;
+  background:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:45px;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+  z-index:100;
+  transition: all 300ms ease;
+}
+
+.btn-wsp:hover{
+  background: #20ba5a;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+  .btn-wsp{
+      width:50px;
+      height:50px;
+      line-height: 49px;
+}
+}
+.btn{margin-top: 1rem;
+display: inline-block;
+padding: .5rem 3.5rem;
+font-size: 1.5rem;
+color: #FFF;
+background: #AF2655;
+cursor: pointer;
+border-radius: 22px;}
+
+.btn:hover{letter-spacing: .2rem; }
+
+
+
+
+ /*----------------------------------------------------------------------------------------
+Nav-bar
+-------------------------------------------------------------------------------------------*/
+
+.header{
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:1.0rem 7%;
+  border-bottom: #333;
+  position: fixed;
+  top: 0;left: 0;right: 0;
+  z-index: 1000;
+}
+
+.header  .logo img {height: 4rem;border-radius: 50%;}
+
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #333;
+    margin: 0 1rem;
+  }
+
+  .header .navbar a:hover{
+    color: #AF2655;
+    border-bottom: .1rem solid #333;
+    padding-bottom: .5rem;
+  }
+
+  #menu-btn{font-size: 2.5rem;
+    display: none;
+    color: #eee;
+    cursor: pointer;
+  }
+
+ /*----------------------------------------------------------------------------------------
+Cover
+-------------------------------------------------------------------------------------------*/
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 100%), url(outdoor-shot-hapy-female-student-watches-webinar-tutorail-video-via-digital-tablet-wears-neat-clothes-poses-wooden-table-urban-place-has-snack-people-studying-lifestyle-concept\ \(2\).jpg) no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  justify-content: center;
+  z-index: 1;
+  margin-bottom: 20px;
+  
+}
+
+.home .content{
+  max-width: 60rem;
+}
+
+.home .content h3{
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  padding: 25% 0 0 0;
+}
+
+.home .content p{
+  font-size: 2rem;
+  font-weight: medium;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #eee;
+  font-weight: bold;
+}
+
+.home{animation: fade-out linear; animation-timeline: view(); animation-range: exit -200px;animation: cover-animation linear forwards;
+  animation-timeline: view();
+  }
+  @keyframes fade-out{ to{opacity:0 ;} }
+  @keyframes cover-animation{ 50% {opacity: 2;}
+  85% {opacity: 0;}}
+
+  @media (max-width:767px){
+
+    
+.home .content{
+  max-width: 100%;
+}
+    .home .content h3{ font-size: 5rem; 
+     margin: 0;
+     padding: 0 30px 0 1px;
+  align-items: center;
+text-align: center;}
+
+.home .content p{ margin: 0;
+  padding: 0 35px 0 1px;
+padding-bottom: 40px; }
+
+  .home .btn{margin: 0;
+  align-items: center; 
+  align-items: center;}
+
+  section{padding: 0 0;}
+  }
+  
+
+/*----------------------------------------------------------------------------------------------------------
+About
+----------------------------------------------------------------------------------------------------------*/
+.about .row{display: flex;
+  align-items: center;
+  background: #9BABB8;
+  flex-wrap: wrap;margin-bottom: 20px;}
+
+.about .row .img{flex: 1 1 47rem;}
+
+.about .row .image img{width: 100%;}
+
+.about .row .content{flex: 1 1 45rem;
+padding: 2rem;}
+
+.about .row .content h3{font-size: 3rem;
+  color: #333;text-align: center;}
+
+  .about .row .content p{font-size: 1.6rem;
+    color: #333;
+  padding: 1rem 0;
+line-height: 1.8;}
+
+@media (max-width:767px){
+
+  .about{width: 100%;}
+
+  .heading{
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    padding-top: 3.5rem;
+    font-size: 4rem;
+  }
+  
+  .heading span{color: #AF2655;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  font-family: 4rem; }
+  } 
+
+/*----------------------------------------------------------------------------------------------------------
+cursos cards
+----------------------------------------------------------------------------------------------------------*/
+
+
+.cursos .container-cursos {width: 90%;margin: 10px auto;display: flex;flex-wrap: wrap;}
+.cursos .heading-cursos {text-align: center;font-size: 30px;margin-bottom: 50px;}
+
+.cursos .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+
+.cursos .card {
+  width: 22%;
+  background: #FBF9F1;
+  border: 1px solid #f0efef;
+  margin-bottom: 50px;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.cursos .card-header {
+  text-align: center;
+  padding: 20px 5px;
+  color: #FBF9F1;
+}
+.cursos .card-image{width: 250px; border-radius: 10px;}
+.cursos .card-body {padding: 30px 20px;text-align: center;font-size: 18px; color: #000;background-color:#FBF9F1 ;}
+.cursos .h3{color: #000;margin-bottom: 0%;}
+.cursos .button {
+  display: block;
+  color: #9BABB8;
+  text-align: center;
+  background: #AF2655;
+  margin-top: 25px;
+  text-decoration: none;
+  padding: 3px;
+  border-radius: 25px;
+}
+
+.cursos .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+/*-----------------------
+
+Tablet CURSOS
+------------------------*/
+@media (max-width:998px){ 
+
+
+
+/*-----------------------
+
+Smartphone CURSOS
+------------------------*/
+@media (max-width:767px){
+
+  .heading span{color: #AF2655;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-family: 4rem; 
+  text-align: center;}}
+
+
+.cursos .container-cursos{width: 100%;padding-top: 0;
+margin-top: 0;}
+.container-cursos{padding-top: 0;
+  margin-top: 0;}
+
+.cursos .card{width: 80%; display: inline-block;
+  position: relative;
+}
+ .cursos .card-image{width:80%; border-radius: 10px;}
+
+ .cursos .row{margin-left: 0px;}
+  
+ .cursos .card-header {width: 100%;
+  text-align: center;
+  padding: 20px 5px;
+  color: #FBF9F1;
+}
+
+.cursos{padding-top: 0px;}
+
+ }
+
+
+/*----------------------------------------------------------------------------------------------------------
+Counter
+----------------------------------------------------------------------------------------------------------*/
+.counter .containers{width:100%; height:400px; background: #333;background-position: center;box-sizing: inherit;} 
+
+.counter section:not(#section-counters){height: 90vh;width: 90%;margin: 0;padding: 0;}
+
+
+#section-counters  .section-heading {padding-bottom: 2rem; text-align: center;letter-spacing: 0.1rem;}
+
+.counter .counter-grid{ display: grid;grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));padding-bottom: 30vh;margin: 0;padding: 0; }
+
+.counter .counter-item{padding: 3rem 1.5rem; text-align: center; border-radius: 1rem; transition: all0.5s ease-out; transform: translateY(6rem);}
+
+.counter i{ color: #AF2655;font-size: 3.5rem; text-align: center;}
+
+span.num{ color: #f2f2f2f2;display: grid; place-items: center;font-weight: 600px;font-size: 3rem;}
+span.text{ color: #f2f2f2f2;font-size: 1rem;text-align: center;pad: 0.7rem 0; font-weight: 400px; list-style: none; line-height: 0;}
+
+
+/*-----------------------
+
+Tablet COUNTER
+------------------------*/
+@media (max-width:998px){ 
+
+  .counter .containers{height: 200px;width: 450px;margin-left: 15px;margin-right: 25px; }
+   
+   .counter-item i{font: size 7rem; } 
+  
+   .counter .counter-grid{ display: grid;grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));padding-bottom: 30vh;margin: 0;padding: 0; }
+    }
+   /*-----------------------
+
+  Smartphone COUNTER
+  ------------------------*/
+  @media (max-width:767px){
+  
+    .counter .counter-grid{display: grid;grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))}
+      
+    .counter .containers{width: 90%;height: 600px; }
+
+    .counter-item{align-items: center;}
+
+    .counter .counter-item{padding: 3rem 2rem; text-align: center; border-radius: 1rem; transition: all0.5s ease-out; transform: translateY(6rem);}
+     }
+  
+   
+/*----------------------------------------------------------------------------------------------------------
+Venha
+----------------------------------------------------------------------------------------------------------*/
+.gridvenha{display: flex;
+flex-wrap:wrap;
+background-color: #3652AD;
+height: 500px;}
+
+.col-50 h3{color: #FFF;text-align: center; margin-top: 7px;
+margin-bottom: 5px;font-weight: 600;font-size: 30px;}
+
+.col-50 p{color: #FFF; text-align: center; 
+  margin-top: 80px;margin-bottom: 10px;font-size: 25px;}
+
+.col-50 span{font-weight: bold;}
+
+.venha .button{ background-color: #FFC436;margin-top: 1rem;
+margin-left: 11rem;
+display: inline-block;
+padding: .3rem 3.5rem;
+font-size: 1.5rem;
+cursor: pointer;
+border-radius: 22px;
+}
+
+.btn:hover{letter-spacing: .2rem; }
+
+@media (max-width:767px){
+
+  .gridvenha{display: flex;
+    flex-wrap:wrap; height: 650px;}
+
+    .col-50 h3{ margin-top: 5px; font-size: 25px;}
+
+    .col-50 p{ margin-top: 35px;font-size: 18px;}
+  }
+
+
+
+
+/*utilities*/
+.img-res{height: auto;width: 100%;}
+
+
+
+
+
+.col-50{width: 50%;padding: 4% 20px }
+.col-40{width: 40%;padding: 10% 20px}
+.col-60{width: 60%;padding: 10% 20px}
+.col-33{width: 33.33%;padding: 10% 20px}
+.col-100{width: 100%;padding: 10% 20px}
+
+.pt-1{padding: 10px;}
+.pt-2{padding: 30px;}
+.pt-3{padding: 60px;}
+
+.pb-1{padding: 10px;}
+.pb-2{padding: 30px;}
+.pb-3{padding: 60px;}
+
+
+@media (max-width: 768px) {
+  .col-50,.col-40,.col-60,.col-33,.col-100{width: 100%;}
+}
+
+/*----------------------------------------------------------------------------------------------------------
+italiano
+----------------------------------------------------------------------------------------------------------*/
+
+.heading{
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  font-size: 4rem;
+}
+
+.heading span{color: #AF2655;
+text-transform: uppercase;
+padding-bottom: 3.5rem;
+font-family: 4rem; }
+
+
+
+.cover-ita{height: 60vh;width: 100%;padding-bottom: 10px;
+display: flex;background-size: cover;}
+
+
+.grid-1 .col-100 h3{color: #000;text-align: center; 
+  font-size: 30px; margin-bottom: 30px; margin-top: 10px;padding-top: 10px;}
+
+.grid-1 .col-100 h2{font-size: 18px; font-weight: 400;line-height: 30px;}
+
+.grid-1 .col-100 a{font-size: 18px; font-weight: 400;line-height: 30px;}
+
+.grid-2 {background-color: #F3B664;display: flex;
+  width: 100%}
+
+.grid-2 h3{padding-top: 150px;}
+
+.grid-2 .col-50 h2{font-weight: 400;font-size: medium;}
+
+  .col-50-1{width: 50%;padding: 4% 5px;bottom: 0;left: 0; }
+
+  .grid-1 a{text-decoration: none; color: #FF9F29;}
+
+  @media (max-width:767px) { 
+
+  .grid-1 .col-100 h2{line-height: 35px}
+  .grid-2 .col-50 h2{flex-wrap: wrap;}
+  .grid-2 h3{line-height: 45px;}}
+
+/*----------------------------------------------------------------------------------------------------------
+francese
+----------------------------------------------------------------------------------------------------------*/
+
+.grid-3 .col-100 h3{color: #000;text-align: center; 
+  font-size: 30px; margin-bottom: 30px; margin-top: 10px;padding-top: 10px;}
+
+.grid-3 .col-100 h2{font-size: 18px; font-weight: 400;line-height: 30px;}
+
+.grid-3 .col-100 a{font-size: 18px;font-weight: 400;line-height: 30px;}
+
+.grid-4 {background-color: #AC87C5;display: flex;
+  width: 100%}
+
+.grid-4 h3{padding-top: 150px;}
+
+.grid-4 .col-50 h2{font-weight: 400;font-size: medium;}
+
+
+
+  .col-50-1{width: 50%;padding: 4% 5px;bottom: 0;left: 0; }
+
+  .grid-1 a{text-decoration: none; color: #FF9F29;}
+
+  @media(max-width:767px) { 
+  .grid-3 .col-100 h2{line-height: 35px}
+  .grid-4 .col-50 h2{flex-wrap: wrap}
+  .grid-4 h3{line-height: 45px}
+  }
+/*----------------------------------------------------------------------------------------------------------
+sppagnolo
+----------------------------------------------------------------------------------------------------------*/
+
+.grid-5 .col-100 h3{color: #000;text-align: center; 
+  font-size: 30px; margin-bottom: 30px; margin-top: 10px;padding-top: 10px;}
+
+.grid-5 .col-100 h2{font-size: 18px; font-weight: 400;line-height: 30px;}
+
+.grid-5 .col-100 a{font-size: 18px;font-weight: 400;line-height: 30px;}
+
+.grid-6 {background-color: #E78895;display: flex;
+  width: 100%}
+
+.grid-6 h3{padding-top: 150px;}
+
+.grid-6 .col-50 h2{font-weight: 400;font-size: medium;}
+
+  .col-50-1{width: 50%;padding: 4% 5px;bottom: 0;left: 0; }
+
+  .grid-5 a{text-decoration: none; color: #D24545;}
+
+  @media(max-width:767px) { 
+
+    .grid-5 .col-100 h2{line-height: 35px;}
+  .grid-6 .col-50 h2{flex-wrap: wrap;}
+  .grid-6 h3{line-height: 45px;}
+  }
+
+  /*----------------------------------------------------------------------------------------------------------
+  sppagnolo medico
+  ----------------------------------------------------------------------------------------------------------*/
+  
+
+  .grid-7 .col-100 h3{color: #000;text-align: center; 
+    font-size: 30px; margin-bottom: 30px; margin-top: 0;padding-top: 10px;}
+  
+    .grid-7 .col-100 h2{font-size: 18px; font-weight: 400;line-height: 30px;}
+
+    .grid-7 .col-100 a{font-size: 18px;font-weight: 400;line-height: 30px;}
+  
+  .grid-8 {background-color: #5BB318;display: flex;
+    width: 100%}
+
+    .grid-8 h3{padding-top: 150px;}
+  
+  .grid-8 .col-50 h2{font-weight: 400;font-size: medium;}
+  
+    .col-50-1{width: 50%;padding: 4% 5px;bottom: 0;left: 0; }
+
+    
+
+    .grid-7 a{text-decoration: none; color: #2B7A0B;}
+
+    @media(max-width:767px) { 
+
+      .grid-7 .col-100 h2{line-height: 35px;}
+    .grid-8 .col-50 h2{flex-wrap: wrap;}
+    .grid-8 h3{line-height: 45px;}
+    }
+
+/*----------------------------------------------------------------------------------------------------------
+Footer
+----------------------------------------------------------------------------------------------------------*/
+
+
+.footer{position: fixed; bottom: 0;}
+.footer-distributed{ background-color: #333;box-sizing: border-box; widows: 100%; 
+  text-align: left;font-family: "Poppins" sans-serif;padding: 50px 50px 60px 50px;
+margin-top: 80px;}
+
+.footer-distributed p{color: #AF2655;}
+
+.footer-distributed .footer-left,  .footer-distributed .footer-center,  .footer-distributed .footer-right{
+  display: inline-block;vertical-align: top;}
+
+  .footer__logo{width: 100px;border-radius: 15px;}
+
+/*--------------------------
+Footer left
+--------------------------*/
+.footer-distributed .footer-left{width: 30%;}
+.footer-distributed h3{color: #AF2655;font: normal 16px 'Cookie', cursive; margin: 0;}
+.footer-distributed h3 span{color: #f2f2f2f2;} 
+/*--------------------------
+Footer links
+--------------------------*/
+.footer-distributed .footer-links{color: #f2f2f2f2; margin: 20px 0 12px;}
+.footer-distributed .footer-links a{display: block;line-height: 1.8; text-decoration: none;color: inherit;padding: 8px;}
+.footer__logo{width: 150px;border-radius: 15px;}
+.footer-distributed .footer-company-name{color: #f2f2f2;font-size: 14px; font-weight: normal;margin: 0}
+/*--------------------------
+Footer Center
+--------------------------*/
+.footer-distributed .footer-center{width: 35% }
+.footer-distributed .footer-center i{ background-color: #47A992; color: #fff;font-size: 25px;width: 38px;height: 38px;
+  border-radius: 50%; text-align: center;line-height: 42px; margin: 10px 15px; vertical-align: middle;}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px; line-height: 38px;}
+.footer-distributed .footer-center p{
+  display: inline-block;color: #f2f2f2f2; vertical-align:middle;margin: 0;}
+.footer-distributed .footer-center p span{display: block;font-weight: normal;font-size: 14px;line-height: 2; }
+.footer-distributed .footer-center p a{color: #FFF; text-decoration: none;}
+/*--------------------------
+Footer Right
+--------------------------*/
+.footer-distributed .footer-right{width: 30%;}
+.footer-distributed .footer-comapny-about{line-height: 20px; color: #f2f2f2f2;font-size: 13px;font: normal;margin: 0;}
+.footer-distributed .footer-comapny-about span{display: block;color: #f2f2f2f2;font-size: 18px;font-weight: bold;margin-bottom: 20px;}
+.footer-distributed .footer-icons{margin-top: 25px;}
+.footer-distributed .footer-icons a{display: inline-block;width: 35px;height: 35px;cursor: pointer;background-color: #333;color: #47A992; 
+border-radius: 2px;font-size: 20px;color: #f2f2f2f2; text-align: center;line-height: 35px;margin-right: 3px;margin-bottom: 5px;}
+.footer-distributed .footer-icons a:hover{background-color: #47A992;}
+.footer-links a:hover{color: #47A992;}
+
+
+
+  /*-----------------------
+  
+  Smartphone Footer
+  ------------------------*/
+  @media (max-width:767px){
+  
+    .single-post .footer { padding-bottom: 50px; }
+    .footer__logo{width: 80px;border-radius: 15px;}
+    .footer__menu { text-align: left; margin-top: 20px; font-size: 14px; }
+    .footer__menu .sub-menu { display: none; }
+    .footer__menu li { display: block; width: 100%; }
+    .footer__menu li a { display: block; width: 100%; border-top: 1px solid #555555; padding: 10px 0 0 0; }
+
+    .footer-distributed .footer-center p{font-size: 7px; }
+    .footer-distributed .footer-center a{font-size: 7px;}
+    .footer-distributed .footer-center i{ background-color: #47A992; color: #fff;font-size: 10px;width: 38px;height: 38px;
+      border-radius: 50%; text-align: center;line-height: 42px; margin: 10px 15px; vertical-align: middle;}
+      .footer-distributed .footer-center{width: 45% }
+
+    .footer-distributed .footer-right{width: 20%;}
+
+    .footer-distributed .footer-comapny-about span{display: inline;color: #f2f2f2f2;font-size: 14px;font-weight: bold;margin-bottom: 20px;}
+    .footer-distributed .footer-comapny-about{line-height: 13px; color: #f2f2f2f2;font-size: 9px;font: normal;margin: 0;inline-size: 1px;}
+  
+  }
+
+/*media queries NAVBAR*/
+@media(max-width:991px){
+
+  html{font-size: 65%;}
+
+  .header{padding: 1.5rem 2rem;}
+ }
+
+  @media(max-width:768px){
+
+#menu-btn{
+color: #eee;
+font-size: 2.5rem;
+cursor: pointer;
+display: block;
+top:100%; right:0; left: 100%; 
+}
+.header  .logo img {height: 4rem;border-radius: 100%}
+  .header .navbar{
+    position: absolute;
+    display: block;
+    background: #333;
+    top: 100%;right:100%;left:0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  height: 300px;
+width: 500px;}
+
+  .header .active{ clip-path:polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    display: block;
+    background: #333;
+  color: #f2f2f2;}
+
+  .header .navbar a{
+    top:100%; right:0; left: 100%; 
+  display: block;
+  margin: 1.5rem;
+  font-size: 2rem; 
+  color: #f2f2f2f2;
+  background: #333;}
+} 
+
+@media(max-width:450px){
+
+  html{font-size: 55%;}
+
+
+ }
+
+
+/*fine media queries*/
