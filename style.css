@@ -206,11 +206,23 @@ Cover
 
   @media (max-width:767px){
 
-    
+    .home{
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 100%), url(outdoor-shot-hapy-female-student-watches-webinar-tutorail-video-via-digital-tablet-wears-neat-clothes-poses-wooden-table-urban-place-has-snack-people-studying-lifestyle-concept\ \(2\).jpg) no-repeat center center;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      justify-content: center;
+      z-index: 1;
+      margin-bottom: 20px;
+      
+    }
 .home .content{
-  max-width: 100%;
-}
-    .home .content h3{ font-size: 5rem; 
+  max-width: 100%;}
+
+.home .content h3{ font-size: 5rem; 
      margin: 0;
      padding: 0 30px 0 1px;
   align-items: center;
@@ -254,15 +266,26 @@ line-height: 1.8;}
 @media (max-width:767px){
 
   .about{width: 100%;}
+  
 
   .heading{
     text-align: center;
     color: #333;
     text-transform: uppercase;
-    padding-bottom: 3.5rem;
+    flex-wrap: wrap;
     padding-top: 3.5rem;
     font-size: 4rem;
   }
+
+  .about .row .content{flex: 1 1 40rem;
+    padding: 1rem;}
+
+  
+
+  .about .row{display: flex;
+    align-items: center;
+    background: #9BABB8;
+    flex-wrap: wrap;}
   
   .heading span{color: #AF2655;
   text-transform: uppercase;
@@ -402,7 +425,7 @@ Tablet COUNTER
   
     .counter .counter-grid{display: grid;grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))}
       
-    .counter .containers{width: 90%;height: 600px; }
+    .counter .containers{width: 90%;height: auto; margin-bottom: 80px;padding: 75px; flex-wrap: wrap; display: flexbox;padding-top: 5px;}
 
     .counter-item{align-items: center;}
 
@@ -534,7 +557,7 @@ francese
 
 .grid-3 .col-100 a{font-size: 18px;font-weight: 400;line-height: 30px;}
 
-.grid-4 {background-color: #AC87C5;display: flex;
+.grid-4 {background-color: #756AB6;display: flex;
   width: 100%}
 
 .grid-4 h3{padding-top: 150px;}
